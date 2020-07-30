@@ -10,9 +10,8 @@ import java.util.Calendar;
 
 public class Student extends Person implements Serializable {
 
-    private static final long serialVersionUID = -14518038974618105L;
-
-    private int course;
+    private static final long serialVersionUID = -7969037983296287818L;
+    private Integer course;
 
     public Student() {
         System.out.println("Contructor::Student");
@@ -40,7 +39,7 @@ public class Student extends Person implements Serializable {
     private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException {
         in.defaultReadObject();
         long writeTime = in.readLong();
-//        System.out.println(writeTime);
+        System.out.println(writeTime);
     }
 
     @Override

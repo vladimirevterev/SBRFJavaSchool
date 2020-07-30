@@ -1,5 +1,6 @@
 package ru.sbrf.javaschool.entity.person;
 
+import java.io.ObjectStreamField;
 import java.io.Serializable;
 
 public class Person {
@@ -7,8 +8,10 @@ public class Person {
     private static final long serialVersionUID = -1686061928787043566L;
 
     private String firstname;
-    transient private String secondname;
+    private String secondname;
     private int age;
+
+    private static final ObjectStreamField[] serialPersistentFields = {new ObjectStreamField("firstname", String.class)};
 
     public Person(String firstname, String secondname, int age) {
         this.firstname = firstname;
