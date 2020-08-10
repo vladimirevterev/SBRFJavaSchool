@@ -28,8 +28,8 @@ public class JDBCMain {
         users.forEach(user -> System.out.println(user.toString()));
         User firstUser = userRepository.findById(1);
         System.out.println("User with id 1 = " + firstUser);
-        userRepository.delete(user1.getId().intValue());
-        userRepository.delete(user2.getId().intValue());
+//        userRepository.delete(user1.getId().intValue());
+//        userRepository.delete(user2.getId().intValue());
 
         CustomerMapper customerMapper = new CustomerMapper();
         CustomerRepository customerRepository = new CustomerRepository(
